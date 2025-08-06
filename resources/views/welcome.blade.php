@@ -22,27 +22,27 @@
         rel="stylesheet">
 
     <!-- css file  -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/plugins.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/extra.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/cookie-consent.css">
-
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/plugins.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/style.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/extra.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/cookie-consent.css')}}">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('frontend/assets/images/favicon.png') }}" type="image/x-icon">
 
-    <link rel="stylesheet" href="/admin/css/toastr.min.css">
+    <link rel="stylesheet" href="{{ asset('frontend/admin/css/toastr.min.css') }}">
 
 </head>
+
 
 <body class="direction-ltr">
     <!-- Preloader Area Start -->
     <div id="preloader">
         <div id="status">
-            <img src="assets/images/preloader.svg" alt="img" />
+            <img src="{{ asset('frontend/assets/images/preloader.svg')}}" alt="img" />
         </div>
     </div>
     <!-- Preloader Area End -->
@@ -69,43 +69,31 @@
                                 <div class="top-bar-menu">
                                     <ul class="menu-list">
                                         <li class="menu-item"><a class="menu-link" href="javascript:void(0)"
-                                                data-bs-toggle="modal" data-bs-target="#trackOrderModal">Track Order</a>
+                                            data-bs-toggle="modal" data-bs-target="#trackOrderModal">Track Order</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="switcher-lang-currency">
-                                    <div class="lang-switcher">
-                                        <span class="flag"><img src="assets/images/language/en.png"
-                                                alt="united-states" /></span>
-                                        <a href="javascript:void(0)" class="lang">
-                                            English
-                                            <i class="fas fa-angle-down"></i>
-                                        </a>
-                                        <ul class="lang-list">
-                                            <li class="single-lang"><span class="flag"><img
-                                                        src="assets/images/language/fr.png" alt="india"></span><a
-                                                    class="lang-text" href="/locale/fr">German</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <div class="switcher-lang-currency">
+                                <div class="lang-switcher">
+                                    <span class="flag"><img src="{{ asset('frontend/assets/images/language/en.png') }}"
+                                            alt="united-states" /></span>
+                                    <a href="javascript:void(0)" class="lang">
+                                        English
+                                        <i class="fas fa-angle-down"></i>
+                                    </a>
+                                    <ul class="lang-list">
+                                        <li class="single-lang"><span class="flag"><img
+                                                    src="{{ asset('frontend/assets/images/language/fr.png') }}" alt="india"></span><a
+                                                class="lang-text" href="/locale/fr">German</a>
+                                        </li>
+                                    </ul>
                                 </div>
+                            </div>
                                 <div class="account-switcher">
-                                    <span class="flag"><img src="assets/images/user-avatar11.png"
+                                    <span class="flag"><img src="{{ asset('frontend/assets/images/user-avatar11.png') }}"
                                             alt="fashionwave"></span>
                                     <a href="signin.html" class="lang">My Account</a>
-                                    <!-- <span class="flag">
-                                        <img src="data:image/png;base64,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"
-                                            alt="Fashionwave">
-                                    </span>
-
-                                    <a href="javascript:void(0)" class="lang">rony <i class="fas fa-angle-down"></i></a>
-                                    <ul class="account-list">
-                                        <li class="single-lang"><a class="lang-text"
-                                                href="/user/profile">Profile</a>
-                                        </li>
-                                        <li class="single-lang"><a class="lang-text"
-                                                href="/user/logout">Logout</a></li>
-                                    </ul> -->
+                                    
                                 </div>
                             </div>
                         </div>
@@ -117,7 +105,7 @@
                     <div class="header-middle-wrap">
                         <div class="brand-area">
                             <a class="brand-logo" href="index.html"><img class="brand-image"
-                                    src="assets/images/logo.png" alt="Fashionwave" /></a>
+                                    src="{{ asset('frontend/assets/images/logo.png') }}" alt="Fashionwave" /></a>
                         </div>
                         <div class="search-area">
                             <form action="#" method="get">
@@ -223,7 +211,7 @@
                 <div class="menu-wrap">
                     <div class="header-left">
                         <a class="brand-logo" href="http://127.0.0.1:8000"><img class="brand-image"
-                                src="assets/images/logo.png" alt="Fashionwave" /></a>
+                            src="{{ asset('frontend/assets/images/logo.png') }}" alt="Fashionwave" /></a>
                     </div>
                     <div class="header-right">
                         <a href="wishlist.html" class="wishlist-btn header-btn">
@@ -260,7 +248,7 @@
     <div class="offcanvas offcanvas-start menu-offcanvas" tabindex="-1" id="offcanvasMobileMenu">
         <div class="mobile-menu-area">
             <div class="offcanvas-header">
-                <a class="brand-logo" href="http://127.0.0.1:8000"><img class="brand-image" src="assets/images/logo.png"
+            <a class="brand-logo" href="http://127.0.0.1:8000"><img class="brand-image" src="{{ asset('frontend/assets/images/logo.png') }}"
                         alt="Fashionwave" /></a>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
@@ -322,7 +310,7 @@
                     <div class="single-grid-product">
                         <div class="product-top">
                             <a href="javascript:void(0)"><img class="product-thumbnal"
-                                    src="assets/images/products/tshirt.png" alt="cart"></a>
+                                    src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="cart"></a>
                         </div>
                         <div class="product-info">
                             <div class="product-name-part">
@@ -356,7 +344,7 @@
                     <div class="single-grid-product">
                         <div class="product-top">
                             <a href="javascript:void(0)"><img class="product-thumbnal"
-                                    src="assets/images/products/tshirt.png" alt="cart"></a>
+                                    src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="cart"></a>
                         </div>
                         <div class="product-info">
                             <div class="product-name-part">
@@ -411,7 +399,7 @@
     <div class="hero-section">
         <div class="hero-slider">
             <div class="signle-slide"
-                style="background-image: url('http://localhost/projects/ecom/frontend/assets/images/slider/slider.jpg');">
+            style="background-image: url('{{ asset('frontend/assets/images/slider/slider.jpg') }}');">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-6 mb-5">
@@ -434,7 +422,7 @@
                 </div>
             </div>
             <div class="signle-slide"
-                style="background-image: url('http://localhost/projects/ecom/frontend/assets/images/slider/slider.jpg');">
+            style="background-image: url('{{ asset('frontend/assets/images/slider/slider.jpg') }}');">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-6 mb-5">
@@ -457,7 +445,7 @@
                 </div>
             </div>
             <div class="signle-slide"
-                style="background-image: url('http://localhost/projects/ecom/frontend/assets/images/slider/slider.jpg');">
+                style="background-image: url('{{ asset('frontend/assets/images/slider/slider.jpg') }}');">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-6 mb-5">
@@ -625,7 +613,7 @@
                     <div class="single-grid-product">
                         <div class="product-top">
                             <a href="/product/single/fit-flare-dress-2"><img class="product-thumbnal"
-                                    src="assets/images/products/tshirt.png" alt="product" /></a>
+                                    src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                             <div class="product-flags">
                                 <span class="product-flag sale">NEW</span>
                                 <span class="product-flag discount">-10.00</span>
@@ -668,7 +656,7 @@
                     <div class="single-grid-product">
                         <div class="product-top">
                             <a href="product-details.html"><img class="product-thumbnal"
-                                    src="assets/images/products/tshirt.png" alt="product" /></a>
+                                    src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                             <div class="product-flags">
                                 <span class="product-flag sale">HOT</span>
                                 <span class="product-flag discount">-10.00</span>
@@ -711,7 +699,7 @@
                     <div class="single-grid-product">
                         <div class="product-top">
                             <a href="/product/single/rosmo-namino-2"><img class="product-thumbnal"
-                                    src="assets/images/products/tshirt.png" alt="product" /></a>
+                                    src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                             <div class="product-flags">
                                 <span class="product-flag sale">HOT</span>
                                 <span class="product-flag discount">-10.00</span>
@@ -754,7 +742,7 @@
                     <div class="single-grid-product">
                         <div class="product-top">
                             <a href="/product/single/Best-t-Shirt-for-male"><img class="product-thumbnal"
-                                    src="assets/images/products/tshirt.png" alt="product" /></a>
+                                    src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                             <div class="product-flags">
                                 <span class="product-flag sale">NEW</span>
                                 <span class="product-flag discount">-10.00</span>
@@ -818,7 +806,7 @@
             </div>
             <div class="story-box-slide">
                 <div class="single-story-box">
-                    <img src="assets/images/avatar.jpg" class="avatar" alt="Testimonial">
+                    <img src="{{ asset('frontend/assets/images/avatar.jpg') }}" class="avatar" alt="Testimonial">
                     <h3 class="story-title">Rony <span class="story-year">Engineer</span>
                     </h3>
                     <p class="story-content">I recently discovered FashionWave, and I must say it's become my go-to for
@@ -826,7 +814,7 @@
                         clothing that feels both high-quality and reasonably priced. </p>
                 </div>
                 <div class="single-story-box">
-                    <img src="assets/images/avatar2.jpg" class="avatar" alt="Testimonial">
+                    <img src="{{ asset('frontend/assets/images/avatar2.jpg') }}" class="avatar" alt="Testimonial">
                     <h3 class="story-title">Dholi <span class="story-year">IT Officer</span>
                     </h3>
                     <p class="story-content">I recently discovered FashionWave, and I must say it's become my go-to for
@@ -834,7 +822,7 @@
                         clothing that feels both high-quality and reasonably priced. </p>
                 </div>
                 <div class="single-story-box">
-                    <img src="assets/images/avatar.jpg" class="avatar" alt="Testimonial">
+                    <img src="{{ asset('frontend/assets/images/avatar.jpg') }}" class="avatar" alt="Testimonial">
                     <h3 class="story-title">Jakir <span class="story-year">CEO</span>
                     </h3>
                     <p class="story-content">I recently discovered FashionWave, and I must say it's become my go-to for
@@ -842,7 +830,7 @@
                         clothing that feels both high-quality and reasonably priced. </p>
                 </div>
                 <div class="single-story-box">
-                    <img src="assets/images/avatar2.jpg" class="avatar" alt="Testimonial">
+                    <img src="{{ asset('frontend/assets/images/avatar2.jpg') }}" class="avatar" alt="Testimonial">
                     <h3 class="story-title">Nahar <span class="story-year">Programmer</span>
                     </h3>
                     <p class="story-content">I recently discovered FashionWave, and I must say it's become my go-to for
@@ -903,7 +891,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/fit-flare-dress-2"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">NEW</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -947,7 +935,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="product-details.html"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">HOT</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -991,7 +979,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/rosmo-namino-2"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">HOT</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1034,7 +1022,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/Best-t-Shirt-for-male"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">NEW</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1082,7 +1070,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/fit-flare-dress-2"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">NEW</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1126,7 +1114,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="product-details.html"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">HOT</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1170,7 +1158,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/rosmo-namino-2"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">HOT</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1213,7 +1201,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/Best-t-Shirt-for-male"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">NEW</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1261,7 +1249,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/fit-flare-dress-2}"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">NEW</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1305,7 +1293,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="product-details.html}"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">HOT</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1349,7 +1337,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/rosmo-namino-2}"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">HOT</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1392,7 +1380,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/Best-t-Shirt-for-male}"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">NEW</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1440,7 +1428,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/fit-flare-dress-2"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">NEW</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1484,7 +1472,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="product-details.html"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">HOT</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1528,7 +1516,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/rosmo-namino-2"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">HOT</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1571,7 +1559,7 @@
                             <div class="single-grid-product">
                                 <div class="product-top">
                                     <a href="/product/single/Best-t-Shirt-for-male"><img class="product-thumbnal"
-                                            src="assets/images/products/tshirt.png" alt="product" /></a>
+                                            src="{{ asset('frontend/assets/images/products/tshirt.png') }}" alt="product" /></a>
                                     <div class="product-flags">
                                         <span class="product-flag sale">NEW</span>
                                         <span class="product-flag discount">-10.00</span>
@@ -1637,7 +1625,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
                         <div class="single-widget about-widget">
                             <a href="http://127.0.0.1:8000" class="footer-brand-logo mb-25"><img
-                                    src="assets/images/logo.png" alt="footer-logo" /></a>
+                                    src="{{ asset('frontend/assets/images/logo.png')}}" alt="footer-logo" /></a>
                             <p class="address-text">
                                 House 24, Road 17 <br />
                                 Banani, <br />
@@ -1834,15 +1822,15 @@
     <div id="SubscribeStore" data-url="/subscribe/store"></div>
 
     <!-- Js file  -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/front/custom.js"></script>
-    <script src="assets/js/front/extra.js"></script>
-    <script src="assets/js/front/sweat_aleart.js"></script>
-    <script src="assets/js/common.js"></script>
+    <script src="{{ asset('frontend/assets/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/front/custom.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/front/extra.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/front/sweat_aleart.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/common.js') }}"></script>
 
     <script src="/admin/js/toastr.min.js"></script>
 
@@ -1879,8 +1867,8 @@
                 loader);
         })(window, document);
     </script>
-    <script src="assets/js/pages/home.js"></script>
-    <script src="assets/js/pages/cart.js"></script>
+    <script src="{{ asset('frontend/assets/js/pages/home.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/pages/cart.js') }}"></script>
 
 </body>
 
