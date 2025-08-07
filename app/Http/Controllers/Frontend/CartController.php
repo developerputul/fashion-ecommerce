@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-    //
+    public function Index()
+    {
+        return view('front.cart.index');
+    } //End Method
 }

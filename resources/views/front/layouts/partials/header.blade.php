@@ -110,7 +110,7 @@
                                 </a>
                             </div>
                             <div class="compare single-btn">
-                                <a href="compare.html" class="compare-btn header-btn">
+                                <a href="{{ route('compare.index') }}" class="compare-btn header-btn">
                                     <div class="btn-left">
                                         <i class="btn-icon flaticon-bar-chart"></i>
                                         <span class="count CompareCuntFromController">0</span>
@@ -343,7 +343,7 @@
                     Proceed To Checkout
                 </a>
                 <div class="view-cart-go">
-                    <a href="cart.html">View Cart</a>
+                    <a href="{{ route('cart.index') }}">View Cart</a>
                 </div>
             </div>
         </div>

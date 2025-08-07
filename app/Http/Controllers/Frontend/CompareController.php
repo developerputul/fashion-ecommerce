@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class CompareController extends Controller
 {
-    //
+    public function Index()
+    {
+        return view('front.compare.index');
+    } //End Method
 }
