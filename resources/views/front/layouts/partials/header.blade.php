@@ -147,7 +147,7 @@
                         <li class="menu-item menu-item-has-children active">
                             <a class="menu-link" href="{{ url('/') }}">Home</a>
                         </li>
-                        <li class="menu-item "><a class="menu-link" href="shop.html">Shop</a>
+                        <li class="menu-item "><a class="menu-link" href="{{ route('product.index') }}">Shop</a>
                         </li>
 
                         <li class="menu-item "><a class="menu-link" href="{{ route('about.us') }}">About Us</a>
@@ -237,7 +237,7 @@
             <nav class="main-menu">
                 <ul class="menu-list">
                     <li class="menu-item"><a class="menu-link" href="{{ url('/') }}">Home</a></li>
-                    <li class="menu-item"><a class="menu-link" href="shop.html">Shop</a>
+                    <li class="menu-item"><a class="menu-link" href="{{ route('product.index') }}">Shop</a>
                     </li>
                     <li class="menu-item"><a class="menu-link" href="about-us.html">Categories</a></li>
                     <li class="menu-item"><a class="menu-link" href="{{ route('about.us') }}">About Us</a></li>

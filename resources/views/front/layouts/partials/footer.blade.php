@@ -214,7 +214,7 @@
     <script src="{{ asset('frontend/assets/js/front/sweat_aleart.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/common.js') }}"></script>
 
-    <script src="/admin/js/toastr.min.js"></script>
+    <script src="{{ asset('frontend/admin/js/toastr.min.js') }}"></script>
 
     <script>
         toastr.options = {

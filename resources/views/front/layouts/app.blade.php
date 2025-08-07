@@ -34,6 +34,8 @@
     <link rel="shortcut icon" href="{{ asset('frontend/assets/images/favicon.png') }}" type="image/x-icon">
 
     <link rel="stylesheet" href="{{ asset('frontend/admin/css/toastr.min.css') }}">
+    
+    {{-- <link rel="stylesheet" href="/admin/css/toastr.min.css"> --}}
 
 </head>
 
