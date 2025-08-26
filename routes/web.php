@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\CompareController;
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Controllers\Frontend\ProductController;
+use App\Http\Controllers\Frontend\SubscribeController;
 use App\Http\Controllers\Frontend\WelcomeController;
 use App\Http\Controllers\Frontend\WishlistController;
 use Illuminate\Support\Facades\Route;
@@ -28,43 +29,25 @@ Route::get('/faq', [PagesController::class, 'Faq'])->name('faq');
 //Product Routes
 Route::get('/product', [ProductController::class, 'Index'])->name('product.index');
 // Route::get('/products/create', [ProductController::class, 'Create'])->name('products.create');
-// Route::post('/products', [ProductController::class, 'Store'])->name('products.store');
-// Route::get('/products/{id}', [ProductController::class, 'Show'])->name('products.show');
-// Route::get('/products/edit/{id}', [ProductController::class, 'Edit'])->name('products.edit');
-// Route::get('/products/update/{id}', [ProductController::class, 'Edit'])->name('products.update');
-
 
 //Compare Routes
 Route::get('/compare', [CompareController::class, 'Index'])->name('compare.index');
 // Route::get('/products/create', [ProductController::class, 'Create'])->name('products.create');
-// Route::post('/products', [ProductController::class, 'Store'])->name('products.store');
-// Route::get('/products/{id}', [ProductController::class, 'Show'])->name('products.show');
-// Route::get('/products/edit/{id}', [ProductController::class, 'Edit'])->name('products.edit');
-// Route::get('/products/update/{id}', [ProductController::class, 'Edit'])->name('products.update');
-
 
 //Cart Routes
 Route::get('/cart', [CartController::class, 'Index'])->name('cart.index');
 // Route::get('/products/create', [ProductController::class, 'Create'])->name('products.create');
-// Route::post('/products', [ProductController::class, 'Store'])->name('products.store');
-// Route::get('/products/{id}', [ProductController::class, 'Show'])->name('products.show');
-// Route::get('/products/edit/{id}', [ProductController::class, 'Edit'])->name('products.edit');
-// Route::get('/products/update/{id}', [ProductController::class, 'Edit'])->name('products.update');
 
 
 //WishList Routes
 Route::get('/wishlist', [WishlistController::class, 'Index'])->name('wishlist.index');
 // Route::get('/products/create', [ProductController::class, 'Create'])->name('products.create');
-// Route::post('/products', [ProductController::class, 'Store'])->name('products.store');
-// Route::get('/products/{id}', [ProductController::class, 'Show'])->name('products.show');
-// Route::get('/products/edit/{id}', [ProductController::class, 'Edit'])->name('products.edit');
-// Route::get('/products/update/{id}', [ProductController::class, 'Edit'])->name('products.update');
 
 
 //Checkout Routes
 Route::get('/checkout', [CheckoutController::class, 'Index'])->name('checkout.index');
 // Route::get('/products/create', [ProductController::class, 'Create'])->name('products.create');
-// Route::post('/products', [ProductController::class, 'Store'])->name('products.store');
-// Route::get('/products/{id}', [ProductController::class, 'Show'])->name('products.show');
-// Route::get('/products/edit/{id}', [ProductController::class, 'Edit'])->name('products.edit');
-// Route::get('/products/update/{id}', [ProductController::class, 'Edit'])->name('products.update');
+
+
+//Subscribe Routes
+Route::post('/subscribe', [SubscribeController::class, 'Store'])->name('subscribe.store');

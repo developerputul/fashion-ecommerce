@@ -33,7 +33,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('frontend/assets/images/favicon.png') }}" type="image/x-icon">
 
-    <link rel="stylesheet" href="{{ asset('frontend/admin/css/toastr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/toastr.css') }}"> 
     
     {{-- <link rel="stylesheet" href="/admin/css/toastr.min.css"> --}}
 
@@ -49,6 +49,20 @@
     </div>
 
     @include('front.layouts.partials.footer')
+
+    <script>
+    // Success Message
+    @if(session('success'))
+        toastr.success("{{ session('success') }}");
+    @endif
+    // Validation Errors (multiple)
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            toastr.error("{{ $error }}");
+        @endforeach
+    @endif
+</script>
+
 
 </body>
 

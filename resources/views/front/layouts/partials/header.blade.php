@@ -63,7 +63,7 @@
                 <div class="container">
                     <div class="header-middle-wrap">
                         <div class="brand-area">
-                            <a class="brand-logo" href="index.html"><img class="brand-image"
+                            <a class="brand-logo" href="{{ url('/') }}"><img class="brand-image"
                                     src="{{ asset('frontend/assets/images/logo.png') }}" alt="Fashionwave" /></a>
                         </div>
                         <div class="search-area">
@@ -132,8 +132,7 @@
                                     </div>
                                     <div class="btn-right">
                                         <span class="btn-text">Your Cart</span>
-                                        <span class="price totalAmount">
-                                            $ 540</span>
+                                        <span class="price totalAmount">$ 540</span>
                                     </div>
                                 </a>
                             </div>
@@ -339,7 +338,7 @@
                     <h3>Total</h3>
                     <h4 class="totalAmount"> $ 540</h4>
                 </div>
-                <a href="checkout.html" class="proceed-to-btn d-block text-center">
+                <a href="{{ route('checkout.index')}}" class="proceed-to-btn d-block text-center">
                     Proceed To Checkout
                 </a>
                 <div class="view-cart-go">
