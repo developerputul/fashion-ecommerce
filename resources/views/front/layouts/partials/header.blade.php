@@ -97,7 +97,7 @@
                         <div class="header-right">
 
                             <div class="wishlist single-btn">
-                                <a href="wishlist.html" class="wishlist-btn header-btn">
+                                <a href="{{ route('wishlist.index') }}" class="wishlist-btn header-btn">
                                     <div class="btn-left">
                                         <i class="btn-icon flaticon-like"></i>
                                         <span class="count wishListCuntFromController">0</span>
@@ -173,7 +173,7 @@
                             src="{{ asset('frontend/assets/images/logo.png') }}" alt="Fashionwave" /></a>
                     </div>
                     <div class="header-right">
-                        <a href="wishlist.html" class="wishlist-btn header-btn">
+                        <a href="{{ route('wishlist.index') }}" class="wishlist-btn header-btn">
                             <div class="btn-left">
                                 <i class="btn-icon flaticon-like"></i>
                                 <span class="count wishListCuntFromController">0</span>

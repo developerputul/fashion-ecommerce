@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class WishlistController extends Controller
 {
-    //
+    public function Index()
+    {
+        return view('front.wishlist.index');
+    } //End Method
 }
