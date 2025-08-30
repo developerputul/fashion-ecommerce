@@ -35,7 +35,7 @@
 
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/toastr.css') }}"> 
     
-    {{-- <link rel="stylesheet" href="/admin/css/toastr.min.css"> --}}
+    
 
 </head>
 
@@ -53,16 +53,16 @@
     <script>
     // Success Message
     @if(session('success'))
-        toastr.success("{{ session('success') }}");
+        toastr.success("{{ session('success') }}", 'Success');
     @endif
     // Validation Errors (multiple)
     @if ($errors->any())
         @foreach ($errors->all() as $error)
-            toastr.error("{{ $error }}");
+            toastr.error("{{ $error }}", 'Validation Error');
         @endforeach
     @endif
-</script>
 
+    </script>
 
 </body>
 
